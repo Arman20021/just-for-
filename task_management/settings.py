@@ -16,6 +16,8 @@ SECRET_KEY = 'django-insecure-l5b_1vt$(!oi_ixxq+3_l9t(f-aotxjwbo!@!9%3(yslx%kzqt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# ALLOWED_HOSTS = []
+ 
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS=['https://*.onrender.com','http://127.0.0.1:8000']
 
@@ -78,7 +80,7 @@ WSGI_APPLICATION = 'task_management.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-#for postgress
+# for postgress
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
@@ -94,7 +96,7 @@ WSGI_APPLICATION = 'task_management.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://event_manager_db_8u25_user:MSeFCfPpiE14ttTrMmJzJnhENmIsicoc@dpg-d5rqht0gjchc73cfpfsg-a.oregon-postgres.render.com/event_manager_db_8u25',
+        default='postgresql://event_manager_db_d1kz_user:Q3OHFoAukyzYHrVOJJAGRaWZlpgkIVwk@dpg-d5rt9gngi27c73cofrqg-a.oregon-postgres.render.com/event_manager_db_d1kz',
         conn_max_age=600
     )
 }
