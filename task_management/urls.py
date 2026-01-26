@@ -3,9 +3,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from debug_toolbar.toolbar import debug_toolbar_urls
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', RedirectView.as_view( url='/tasks/event_manage/',permanent=False)),
     
     path("tasks/",include("tasks.urls"))
 ]+debug_toolbar_urls()
