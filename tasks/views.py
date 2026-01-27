@@ -53,18 +53,16 @@ def test(request):
     return render(request,'test.html',context)
    
 def create_task(request): 
-    # employees=Employee.objects.all()
-    task_form=TaskModelForm()
-    task_detail_form=TaskDetailModelForm()
-
+    task_form = TaskModelForm()
+    task_detail_form = TaskDetailModelForm()
 
     if request.method == "POST":
-        task_form=TaskModelForm(request.POST)
-        task_detail_form=TaskDetailModelForm(request.POST)
+        # Add request.FILES here!
+        task_form = TaskModelForm(request.POST, request.FILES)
+        task_detail_form = TaskDetailModelForm(request.POST)
+        
         if task_form.is_valid() and task_detail_form.is_valid():
-
-            #for django model form data
-            task=task_form.save()
+            task = task_form.save()
             task_detail=task_detail_form.save(commit=False)
             task_detail.task=task
             task_detail.save()
@@ -122,27 +120,35 @@ def view_task(request):
     return render (request,"show_task.html",{"task_count":task_count})
 
 
-def update_task(request,id): 
-    task=Task.objects.get(id=id)
-    task_form=TaskModelForm(instance=task)
-    if task.details:
-        task_detail_form=TaskDetailModelForm(instance=task.details)
-
+def update_task(request, id): 
+    task = Task.objects.get(id=id)
+    
+    # Check if task has details to avoid RelatedObjectDoesNotExist errors
+    task_details = getattr(task, 'details', None)
 
     if request.method == "POST":
-        task_form=TaskModelForm(request.POST,instance=task)
-        task_detail_form=TaskDetailModelForm(request.POST,instance=task.details)
+        # Data is being submitted
+        task_form = TaskModelForm(request.POST, request.FILES, instance=task)
+        task_detail_form = TaskDetailModelForm(request.POST, instance=task_details)
+        
         if task_form.is_valid() and task_detail_form.is_valid():
-             
-            task=task_form.save()
-            task_detail=task_detail_form.save(commit=False)
-            task_detail.task=task
+            task = task_form.save()
+            task_detail = task_detail_form.save(commit=False)
+            task_detail.task = task
             task_detail.save()
-            messages.success(request,"Task Updated Successfully")
-            return redirect ('update-task',id)
+            messages.success(request, "Task Updated Successfully")
+            return redirect('update-task', id=id)
+    else:
+        # This is a GET request - Show the forms with existing data
+        task_form = TaskModelForm(instance=task)
+        task_detail_form = TaskDetailModelForm(instance=task_details)
 
-    context={"task_form":task_form,'task_detail_form':task_detail_form}
-    return render (request,"dashboard/task_form.html",context)
+    # Now these variables exist whether it was a POST or a GET request
+    context = {
+        "task_form": task_form,
+        'task_detail_form': task_detail_form
+    }
+    return render(request, "dashboard/task_form.html", context)
 
 def delete_task(request,id):
     if request.method == 'POST':

@@ -14,11 +14,11 @@ Manager Dashboard
  
     <a href="{% url 'task-detail' task.id %}" class="block">
       <div class="w-full h-40 overflow-hidden rounded-t-xl">
-        {% if task.image %}
-            <img src="{{ task.image.url }}" class=" ">
-        {% else %}
-            <img src="/static/images/task-placeholder.jpg" class=" ">
-        {% endif %}
+      {% if task.image %}
+    <img src="{{ task.image.url }}" alt="{{ task.title }}" style="max-width: 300px;">
+{% else %}
+    <p>No image </p>
+{% endif %}
       </div>
     </a>
 

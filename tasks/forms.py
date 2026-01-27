@@ -67,8 +67,8 @@ class TaskModelForm(StyledFormMixin, forms.ModelForm):
             'description',
             'due_date',
             'assigned_to',
-            'status',   # ✅ client can set status
-            'image',    # ✅ client can upload image
+            'status',    
+            'image',     
         ]
         widgets = {
             'due_date': forms.SelectDateWidget,
