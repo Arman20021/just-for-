@@ -1,6 +1,8 @@
 from django.contrib import admin
-from .models import Task
+from .models import Task,TaskDetail,Employee,Project
 
-@admin.register(Task)
-class TaskAdmin(admin.ModelAdmin):
-    list_display = ('title', 'status', 'due_date')
+ 
+admin.site.register(Task)
+admin.site.register(TaskDetail)
+admin.site.register(Employee)
+admin.site.register(Project)

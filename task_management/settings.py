@@ -2,7 +2,7 @@
 from pathlib import Path
 import os
 import dj_database_url 
-
+from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-l5b_1vt$(!oi_ixxq+3_l9t(f-aotxjwbo!@!9%3(yslx%kzqt'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'tasks',
     'users',
     "debug_toolbar",
+    'core'
 ]
 
 MIDDLEWARE = [
@@ -81,28 +82,28 @@ WSGI_APPLICATION = 'task_management.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 # for postgress
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'task_management',
-#         'USER': 'postgres',
-#         'PASSWORD': '1234',
-#         'HOST': 'localhost',
-#         'PORT': '5432'
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DB_NAME',default=''),
+        'USER': config('DB_USER',default=''),
+        'PASSWORD': config('DB_PASSWORD',default=''),
+        'HOST': config('DB_HOST',default='local_host'),
+        'PORT': config('DB_PORT',cast=int)
+    }
+}
 
 
 # Example for Postgres
  
 
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('postgresql://event_manager_db_v7u1_user:P5HXYS5Sx5tKalCvN579CKdEZr9gkdpa@dpg-d5s9rss9c44c73eqi2gg-a/event_manager_db_v7u1', 'postgresql://postgres:1234@localhost:5432/task_management'),
-        conn_max_age=600,
-    )
-}
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=os.environ.get('postgresql://event_manager_db_v7u1_user:P5HXYS5Sx5tKalCvN579CKdEZr9gkdpa@dpg-d5s9rss9c44c73eqi2gg-a/event_manager_db_v7u1', 'postgresql://postgres:1234@localhost:5432/task_management'),
+#         conn_max_age=600,
+#     )
+# }
 
 #for sql lite
 # DATABASES = {
@@ -155,3 +156,11 @@ STATICFILES_DIRS=[
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = config('EMAIL_HOST ')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS ',cast=bool)
+EMAIL_PORT = config('EMAIL_PORT ')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD =config('EMAIL_HOST_PASSWORD')
