@@ -82,28 +82,28 @@ WSGI_APPLICATION = 'task_management.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 # for postgress
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME',default=''),
-        'USER': config('DB_USER',default=''),
-        'PASSWORD': config('DB_PASSWORD',default=''),
-        'HOST': config('DB_HOST',default='local_host'),
-        'PORT': config('DB_PORT',cast=int)
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': config('DB_NAME',default=''),
+#         'USER': config('DB_USER',default=''),
+#         'PASSWORD': config('DB_PASSWORD',default=''),
+#         'HOST': config('DB_HOST',default='local_host'),
+#         'PORT': config('DB_PORT',cast=int)
+#     }
+# }
 
 
 # Example for Postgres
  
 
 
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default=os.environ.get('postgresql://event_manager_db_v7u1_user:P5HXYS5Sx5tKalCvN579CKdEZr9gkdpa@dpg-d5s9rss9c44c73eqi2gg-a/event_manager_db_v7u1', 'postgresql://postgres:1234@localhost:5432/task_management'),
-#         conn_max_age=600,
-#     )
-# }
+DATABASES = {
+    'default': dj_database_url.config(
+        default=os.environ.get('postgresql://event_manager_db_v7u1_user:P5HXYS5Sx5tKalCvN579CKdEZr9gkdpa@dpg-d5s9rss9c44c73eqi2gg-a/event_manager_db_v7u1', 'postgresql://postgres:1234@localhost:5432/task_management'),
+        conn_max_age=600,
+    )
+}
 
 #for sql lite
 # DATABASES = {
