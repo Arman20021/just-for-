@@ -100,11 +100,10 @@ WSGI_APPLICATION = 'task_management.wsgi.application'
  
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL', 'postgresql://postgres:1234@localhost:5432/task_management'),
-        conn_max_age=600,
+        default='postgresql://event_db_6dch_user:doFkeH2P9iPFY2HRpbjuCWLFcLbfqPIb@dpg-d64848npm1nc738k1of0-a.oregon-postgres.render.com/event_db_6dch',
+        conn_max_age=600
     )
 }
-
 # DATABASES = {
 #     'default': dj_database_url.config(
 #         default=os.environ.get('postgresql://event_db_6dch_user:doFkeH2P9iPFY2HRpbjuCWLFcLbfqPIb@dpg-d64848npm1nc738k1of0-a.oregon-postgres.render.com/event_db_6dch'),
