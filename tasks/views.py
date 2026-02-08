@@ -5,7 +5,24 @@ from tasks.models import *
 from datetime import date
 from django.db.models import Q,Count,Min,Max,Avg
 from django.contrib import messages
+from django.contrib.auth.decorators import user_passes_test,login_required,permission_required
+from users.views import is_admin
+from django.shortcuts import get_object_or_404
+from django.core.mail import send_mail
 # Create your views here.
+
+# views.py
+def is_manager(user):
+ 
+    return user.groups.filter(name__iexact='Manager').exists()
+
+def is_participant(user):
+    return user.groups.filter(name__iexact='Participant').exists()
+
+
+
+@login_required
+@user_passes_test(is_manager,login_url='no-permission')
 def manager_dashboard(request):
     type_filter = request.GET.get('type', 'all')
     query = request.GET.get('q', '').strip()  # search text
@@ -38,20 +55,58 @@ def manager_dashboard(request):
         'counts': counts,
         'query': query,
         'type': type_filter,
+        'role':'manager'
     }
 
     return render(request, "dashboard/manager-dashboard.html", context)
 
-def user_dashboard(request):
-    return render (request,"dashboard/user_dashboard.html")
 
-def test(request):
-    context={
-        "names":["Arman","Islam","Durjoy"],
-        "age":23
+
+@login_required
+@user_passes_test(is_participant,login_url='no-permission')
+def employee_dashboard(request):
+    type_filter = request.GET.get('type', 'all')
+    query = request.GET.get('q', '').strip()  # search text
+
+    # Status counts
+    counts = Task.objects.aggregate(
+        total=Count('id'),
+        completed=Count('id', filter=Q(status="COMPLETED")),
+        in_progress=Count('id', filter=Q(status="IN_PROGRESS")),
+        pending=Count('id', filter=Q(status="PENDING"))
+    )
+
+    # Base query
+    tasks = Task.objects.select_related('details').prefetch_related('assigned_to')
+
+    # Apply status filter
+    if type_filter == 'completed':
+        tasks = tasks.filter(status='COMPLETED')
+    elif type_filter == 'in-progress':
+        tasks = tasks.filter(status='IN_PROGRESS')
+    elif type_filter == 'pending':
+        tasks = tasks.filter(status='PENDING')
+
+    # Apply search filter only on title
+    if query:
+        tasks = tasks.filter(title__icontains=query)
+
+    context = {
+        'tasks': tasks,
+        'counts': counts,
+        'query': query,
+        'type': type_filter,
+        'role':'manager'
     }
-    return render(request,'test.html',context)
-   
+
+    return render(request, "dashboard/user_dashboard.html", context)
+
+
+
+
+    
+@login_required   
+@permission_required("tasks.add_task" )
 def create_task(request): 
     task_form = TaskModelForm()
     task_detail_form = TaskDetailModelForm()
@@ -97,6 +152,8 @@ def create_task(request):
     context={"task_form":task_form,'task_detail_form':task_detail_form}
     return render (request,"dashboard/task_form.html",context)
 
+@login_required 
+@permission_required("tasks.view_task",login_url='no-permission')
 def view_task(request):
     #SHOW THE TASK ARE COMPLETED
     # tasks=Task.objects.filter(status="COMPLETED")
@@ -120,6 +177,8 @@ def view_task(request):
     return render (request,"show_task.html",{"task_count":task_count})
 
 
+@login_required   
+@permission_required("tasks.change_task",login_url='no-permission')
 def update_task(request, id): 
     task = Task.objects.get(id=id)
     
@@ -150,6 +209,10 @@ def update_task(request, id):
     }
     return render(request, "dashboard/task_form.html", context)
 
+
+
+@login_required   
+@permission_required("tasks.delete_task",login_url='no-permission')
 def delete_task(request,id):
     if request.method == 'POST':
         task=Task.objects.get(id=id)
@@ -166,10 +229,79 @@ def event_manage(request):
 
  
 
+ 
+
+
+
+
+@login_required   
+@permission_required("tasks.delete_task",login_url='no-permission')
+def task_details(request,task_id):
+  
+    
+    task=Task.objects.get(id=task_id) 
+    status_choices=Task.STATUS_CHOICES
+
+    if request.method=='POST':
+        selected_status=request.POST.get('task_status')
+        task.status=selected_status
+        task.save()
+        return redirect('task-details',task.id)
+    return render (request,'task_details.html',{'task':task,'status_choices':status_choices})
+
+
+@login_required   
+@permission_required("tasks.delete_task",login_url='no-permission')
+def participant_details(request,task_id):
+  
+    
+    task=Task.objects.get(id=task_id) 
+    event = getattr(task, 'event', None) 
+    status_choices=Task.STATUS_CHOICES
+
+    if request.method=='POST':
+        selected_status=request.POST.get('task_status')
+        task.status=selected_status
+        task.save()
+        return redirect('participant-details',task.id)
+    return render (request,'participant_details.html',{'task':task,'status_choices':status_choices, 'event': event})
+
+
+@login_required
 def dashboard(request):
-    return render(request, 'dashboard/dashboard.html')
+    if is_manager(request.user):
+        return redirect('manager-dashboard')
+    elif is_participant(request.user):
+        return redirect('user-dashboard')
+    elif is_admin(request.user):
+        return redirect('admin-dashboard')
 
+    # return redirect('no-permission')
 
-def task_detail(request, id):
-    task = Task.objects.get(id=id)
-    return render(request, 'dashboard/task_detail.html', {'task': task})
+# tasks/views.py
+
+@login_required
+def rsvp_task(request, task_id):
+    task = Task.objects.get(id=task_id)
+    if task.attendees.filter(id=request.user.id).exists():
+        messages.warning(request, f"You have already joined the task: {task.title}")
+    else:
+        task.attendees.add(request.user)
+        
+       
+        send_mail(
+            'RSVP Confirmation',
+            f'You have successfully RSVP\'d for the task/event: {task.title}',
+            'mdarmanislam20021@gmail.com',
+            [request.user.email],
+            fail_silently=True,
+        )
+        messages.success(request, f"Successfully joined {task.title}!")
+
+    return redirect('my-events')
+
+@login_required
+def my_events(request):
+    # This now matches the related_name='rsvp_tasks' in Task model
+    tasks = request.user.rsvp_tasks.all() 
+    return render(request, 'my_events.html', {'tasks': tasks})

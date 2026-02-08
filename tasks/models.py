@@ -1,14 +1,7 @@
 from django.db import models
-from django.db.models.signals import post_save,m2m_changed,post_delete
-from django.dispatch import receiver
-from django.core.mail import send_mail
+from django.contrib.auth.models import User
 
-class Employee(models.Model):
-    name=models.CharField(max_length=100)
-    email=models.EmailField(unique=True)
-
-    def __str__(self):
-        return self.name
+ 
 
 class Project(models.Model):
     name=models.CharField(max_length=100)
@@ -20,6 +13,9 @@ class Project(models.Model):
 
 # Create your models here.
 class Task(models.Model):
+
+    attendees = models.ManyToManyField(User, related_name='rsvp_tasks', blank=True)
+
     STATUS_CHOICES=[
         ('PENDING','Pending'),
         ('IN_PROGRESS','In Progress'),
@@ -31,7 +27,9 @@ class Task(models.Model):
         on_delete=models.CASCADE,
         default=1
     )
-    assigned_to=models.ManyToManyField(Employee,related_name='tasks')
+    # assigned_to=models.ManyToManyField(Employee,related_name='tasks')
+    assets=models.ImageField(upload_to='task_asset',blank=True,null=True)
+    assigned_to=models.ManyToManyField(User,related_name='tasks')
     title=models.CharField(max_length=250)
     description=models.TextField()
     due_date=models.DateField()
@@ -41,9 +39,10 @@ class Task(models.Model):
         blank=True,
         null=True
     )
-    is_completed=models.BooleanField(default=False)
+    # is_completed=models.BooleanField(default=False)
     create_at=models.DateTimeField(auto_now_add=True)
     updated_at=models.DateTimeField(auto_now=True)
+    
 
     def __str__(self):
         return self.title
@@ -57,7 +56,7 @@ class TaskDetail(models.Model):
         (MEDIUM,'Medium'),
         (LOW,'Low')
     )
-    task=models.OneToOneField(Task,on_delete=models.CASCADE,related_name='details')
+    task=models.OneToOneField(Task,on_delete=models.DO_NOTHING,related_name='details')
     #assigned_to=models.CharField(max_length=100)
     priority=models.CharField(max_length=1,choices=PRIORITY_OPTIONS,default=LOW)
     notes=models.TextField(blank=True,null=True)
@@ -87,10 +86,12 @@ class Event(models.Model):
     time = models.TimeField()
     location = models.CharField(max_length=200)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    attendees = models.ManyToManyField(User, related_name='rsvp_events', blank=True)
+
+   
 
     def __str__(self):
         return self.name
-
 
 class Participant(models.Model):
     name = models.CharField(max_length=100)
@@ -102,25 +103,3 @@ class Participant(models.Model):
 
 
 
-#new part start 
-#signals
-@receiver(m2m_changed,sender=Task.assigned_to.through)
-def notify_employee_on_task_creation(sender,instance,action,**kwargs):
-    if action == 'post_add':
-        assigned_emails=[emp.email for emp in instance.assigned_to.all()]
-       
-
-        send_mail(
-            'New task assigned',
-            f'You have been assigned to the task: {instance.title}',
-            'mdarmanislam20021@gmail.com',        # From
-            assigned_emails,        # To
-            
-)
-
-@receiver(post_delete,sender=Task)
-def delete_assosiate_details(sender,instance,**kwargs):
-    if instance.details:
-        print(instance)
-        instance.details.delete()
-        print("deleted successfully")

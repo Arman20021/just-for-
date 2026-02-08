@@ -1,9 +1,1363 @@
 [
 {
+  "model": "auth.group",
+  "fields": {
+    "name": "Manager",
+    "permissions": [
+      [
+        "add_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "change_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "delete_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "view_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "add_group",
+        "auth",
+        "group"
+      ],
+      [
+        "change_group",
+        "auth",
+        "group"
+      ],
+      [
+        "delete_group",
+        "auth",
+        "group"
+      ],
+      [
+        "view_group",
+        "auth",
+        "group"
+      ],
+      [
+        "add_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "change_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "delete_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "view_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "add_user",
+        "auth",
+        "user"
+      ],
+      [
+        "change_user",
+        "auth",
+        "user"
+      ],
+      [
+        "delete_user",
+        "auth",
+        "user"
+      ],
+      [
+        "view_user",
+        "auth",
+        "user"
+      ],
+      [
+        "add_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "change_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "delete_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "view_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "add_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "change_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "delete_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "view_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "add_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "change_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "delete_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "view_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "add_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "change_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "delete_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "view_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "add_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "change_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "delete_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "view_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "add_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "change_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "delete_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "view_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "add_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "change_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "delete_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "view_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "add_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "change_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "delete_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "view_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "add_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "change_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "delete_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "view_taskdetail",
+        "tasks",
+        "taskdetail"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "fields": {
+    "name": "CEO",
+    "permissions": [
+      [
+        "add_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "change_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "delete_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "view_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "add_group",
+        "auth",
+        "group"
+      ],
+      [
+        "change_group",
+        "auth",
+        "group"
+      ],
+      [
+        "delete_group",
+        "auth",
+        "group"
+      ],
+      [
+        "view_group",
+        "auth",
+        "group"
+      ],
+      [
+        "add_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "change_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "delete_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "view_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "add_user",
+        "auth",
+        "user"
+      ],
+      [
+        "change_user",
+        "auth",
+        "user"
+      ],
+      [
+        "delete_user",
+        "auth",
+        "user"
+      ],
+      [
+        "view_user",
+        "auth",
+        "user"
+      ],
+      [
+        "add_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "change_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "delete_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "view_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "add_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "change_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "delete_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "view_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "add_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "change_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "delete_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "view_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "add_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "change_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "delete_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "view_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "add_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "change_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "delete_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "view_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "add_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "change_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "delete_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "view_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "add_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "change_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "delete_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "view_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "add_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "change_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "delete_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "view_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "add_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "change_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "delete_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "view_taskdetail",
+        "tasks",
+        "taskdetail"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "fields": {
+    "name": "Intern",
+    "permissions": [
+      [
+        "add_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "change_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "delete_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "view_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "add_group",
+        "auth",
+        "group"
+      ],
+      [
+        "change_group",
+        "auth",
+        "group"
+      ],
+      [
+        "delete_group",
+        "auth",
+        "group"
+      ],
+      [
+        "view_group",
+        "auth",
+        "group"
+      ],
+      [
+        "add_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "change_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "delete_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "view_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "add_user",
+        "auth",
+        "user"
+      ],
+      [
+        "change_user",
+        "auth",
+        "user"
+      ],
+      [
+        "delete_user",
+        "auth",
+        "user"
+      ],
+      [
+        "view_user",
+        "auth",
+        "user"
+      ],
+      [
+        "add_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "change_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "delete_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "view_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "add_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "change_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "delete_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "view_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "add_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "change_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "delete_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "view_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "add_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "change_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "delete_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "view_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "add_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "change_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "delete_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "view_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "add_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "change_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "delete_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "view_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "add_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "change_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "delete_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "view_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "add_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "change_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "delete_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "view_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "add_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "change_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "delete_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "view_taskdetail",
+        "tasks",
+        "taskdetail"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "fields": {
+    "name": "Helper",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "fields": {
+    "name": "User",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "fields": {
+    "name": "Admin",
+    "permissions": [
+      [
+        "add_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "change_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "delete_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "view_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "add_group",
+        "auth",
+        "group"
+      ],
+      [
+        "change_group",
+        "auth",
+        "group"
+      ],
+      [
+        "delete_group",
+        "auth",
+        "group"
+      ],
+      [
+        "view_group",
+        "auth",
+        "group"
+      ],
+      [
+        "add_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "change_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "delete_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "view_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "add_user",
+        "auth",
+        "user"
+      ],
+      [
+        "change_user",
+        "auth",
+        "user"
+      ],
+      [
+        "delete_user",
+        "auth",
+        "user"
+      ],
+      [
+        "view_user",
+        "auth",
+        "user"
+      ],
+      [
+        "add_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "change_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "delete_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "view_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "add_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "change_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "delete_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "view_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "add_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "change_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "delete_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "view_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "add_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "change_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "delete_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "view_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "add_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "change_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "delete_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "view_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "add_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "change_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "delete_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "view_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "add_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "change_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "delete_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "view_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "add_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "change_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "delete_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "view_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "add_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "change_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "delete_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "view_taskdetail",
+        "tasks",
+        "taskdetail"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "fields": {
+    "name": "Participant",
+    "permissions": [
+      [
+        "add_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "change_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "delete_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "view_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "add_group",
+        "auth",
+        "group"
+      ],
+      [
+        "change_group",
+        "auth",
+        "group"
+      ],
+      [
+        "delete_group",
+        "auth",
+        "group"
+      ],
+      [
+        "view_group",
+        "auth",
+        "group"
+      ],
+      [
+        "add_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "change_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "delete_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "view_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "add_user",
+        "auth",
+        "user"
+      ],
+      [
+        "change_user",
+        "auth",
+        "user"
+      ],
+      [
+        "delete_user",
+        "auth",
+        "user"
+      ],
+      [
+        "view_user",
+        "auth",
+        "user"
+      ],
+      [
+        "add_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "change_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "delete_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "view_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "add_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "change_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "delete_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "view_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "add_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "change_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "delete_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "view_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "add_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "change_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "delete_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "view_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "add_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "change_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "delete_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "view_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "add_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "change_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "delete_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "view_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "add_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "change_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "delete_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "view_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "add_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "change_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "delete_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "view_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "add_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "change_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "delete_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "view_taskdetail",
+        "tasks",
+        "taskdetail"
+      ]
+    ]
+  }
+},
+{
   "model": "auth.user",
   "fields": {
     "password": "pbkdf2_sha256$1200000$Z60OMcNKe6u3pxyxjf1yzq$oTIeuyjOzNNIp9ftjSJnCbYLwbfeF/GaIZv3lx+5pc8=",
-    "last_login": "2026-01-24T16:50:06.953Z",
+    "last_login": "2026-02-08T10:58:40.683Z",
     "is_superuser": true,
     "username": "arman",
     "first_name": "",
@@ -11,97 +1365,861 @@
     "email": "mdarmanislam20021@gmail.com",
     "is_staff": true,
     "is_active": true,
-    "date_joined": "2026-01-24T16:49:44.483Z",
-    "groups": [],
+    "date_joined": "2026-01-24T16:49:44Z",
+    "groups": [
+      [
+        "CEO"
+      ],
+      [
+        "Manager"
+      ]
+    ],
+    "user_permissions": [
+      [
+        "add_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "change_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "delete_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "view_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "add_group",
+        "auth",
+        "group"
+      ],
+      [
+        "change_group",
+        "auth",
+        "group"
+      ],
+      [
+        "delete_group",
+        "auth",
+        "group"
+      ],
+      [
+        "view_group",
+        "auth",
+        "group"
+      ],
+      [
+        "add_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "change_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "delete_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "view_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "add_user",
+        "auth",
+        "user"
+      ],
+      [
+        "change_user",
+        "auth",
+        "user"
+      ],
+      [
+        "delete_user",
+        "auth",
+        "user"
+      ],
+      [
+        "view_user",
+        "auth",
+        "user"
+      ],
+      [
+        "add_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "change_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "delete_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "view_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "add_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "change_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "delete_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "view_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "add_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "change_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "delete_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "view_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "add_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "change_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "delete_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "view_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "add_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "change_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "delete_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "view_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "add_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "change_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "delete_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "view_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "add_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "change_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "delete_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "view_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "add_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "change_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "delete_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "view_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "add_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "change_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "delete_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "view_taskdetail",
+        "tasks",
+        "taskdetail"
+      ]
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$5lijwEE88hPkSWuvTf6935$u5lai+zdhUL/U6IaLx2LS7v+PuI1TTojB6KRxFcK35E=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "hanig",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-27T19:53:39.289Z",
+    "groups": [
+      [
+        "Intern"
+      ]
+    ],
     "user_permissions": []
   }
 },
 {
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$9Ep4O3NcP358G0AT118kdm$gRZRifPnEQp8Rqu11ZrRV87g9hSSDnTBboEF97tu+Hw=",
+    "last_login": "2026-02-08T10:57:18.265Z",
+    "is_superuser": false,
+    "username": "Sadia",
+    "first_name": "Sadia",
+    "last_name": "Afrin",
+    "email": "dfdfd@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-27T20:50:53Z",
+    "groups": [
+      [
+        "Manager"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$xCOwmDbRPrZRsFt9FOmOR6$ZbZ2GictFg4nn6EW5KYqqKMr96shMwZhy8ym2OLeK80=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "SA",
+    "first_name": "Sadia",
+    "last_name": "Afrin",
+    "email": "dfdfd@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-27T20:51:31.958Z",
+    "groups": [
+      [
+        "Manager"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$FssUZUW5Q3G6E2jDdLGK0E$7baVOG+4PH1l2A8/mRNNbChZInbb4C0nLj6V+v9WdvE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "test2",
+    "first_name": "test",
+    "last_name": "test",
+    "email": "mdarmanislam20021@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-27T20:53:57.999Z",
+    "groups": [
+      [
+        "Manager"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "83`!~12cl9RD",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "dfd",
+    "first_name": "fdf",
+    "last_name": "fdf",
+    "email": "fdf@gemial.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-28T19:17:07.573Z",
+    "groups": [
+      [
+        "Manager"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "83`!~12cl9RD",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "zc",
+    "first_name": "fdf",
+    "last_name": "fdf",
+    "email": "fdf@gemial.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-28T19:17:15.751Z",
+    "groups": [
+      [
+        "Manager"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "armandfd",
+    "first_name": "fdf",
+    "last_name": "fdf",
+    "email": "fd@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-28T19:32:15.216Z",
+    "groups": [
+      [
+        "Manager"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "armanfdf",
+    "first_name": "fdf",
+    "last_name": "fdf",
+    "email": "mdarmanislam20021@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-28T19:51:10.616Z",
+    "groups": [
+      [
+        "Manager"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "rima",
+    "first_name": "afadf",
+    "last_name": "afdaf",
+    "email": "hotil22730@cctoolz.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-28T23:11:02.028Z",
+    "groups": [
+      [
+        "Intern"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "!VhlbZTYX8Y8A5ILZoB0cl6eSNPy8tskpcablwQpb",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "hiii",
+    "first_name": "dfsa",
+    "last_name": "afda",
+    "email": "silifo3270@sepole.com",
+    "is_staff": false,
+    "is_active": false,
+    "date_joined": "2026-01-29T16:32:29.467Z",
+    "groups": [
+      [
+        "Manager"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "!K4T0MvzUyhsko5107K7LCxbAzM5qnQFyPQcWVt2K",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "durjoy",
+    "first_name": "Arman",
+    "last_name": "Islam",
+    "email": "someh75209@okexbit.com",
+    "is_staff": false,
+    "is_active": false,
+    "date_joined": "2026-01-29T16:45:34.834Z",
+    "groups": [
+      [
+        "Manager"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$giNjBcqHN5k8dcmXufU2WI$pBNS52Hp6ZaY/LHf5/YpnnQgQttfjqnfr26nTKko2o0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "dr",
+    "first_name": "Arman",
+    "last_name": "fdf",
+    "email": "tfpypfo9y4@xkxkud.com",
+    "is_staff": false,
+    "is_active": false,
+    "date_joined": "2026-01-29T17:26:58.504Z",
+    "groups": [
+      [
+        "Manager"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$1wdFpohxyql8WnMI1dh37e$t55136QGjqH51uRGuLmd7PqGVFYBDr6wehdB58Cs0i8=",
+    "last_login": "2026-01-29T17:39:27.978Z",
+    "is_superuser": false,
+    "username": "drr",
+    "first_name": "fdf",
+    "last_name": "Islam",
+    "email": "iorfy80zri@ruutukf.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-29T17:30:31.878Z",
+    "groups": [
+      [
+        "Manager"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$owYcCp3BX0oxbxb3mPRvqp$AqIfURcrnvKjsMZhdev+sJVOXYd053GWV6IKDDaQAgE=",
+    "last_login": "2026-01-30T18:50:04.831Z",
+    "is_superuser": false,
+    "username": "mr.x",
+    "first_name": "Arman",
+    "last_name": "fd",
+    "email": "mohen66673@okexbit.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-30T18:48:57.082Z",
+    "groups": [
+      [
+        "User"
+      ]
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$5iw7yidHKAh07G10jkDp1r$Npa/BUaML7qJx/BQHl9wLtsC+vgNHt8l1rxmbI93UDI=",
+    "last_login": "2026-02-08T11:13:02.142Z",
+    "is_superuser": false,
+    "username": "a",
+    "first_name": "a",
+    "last_name": "a",
+    "email": "javesaj212@icubik.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-07T11:59:24Z",
+    "groups": [
+      [
+        "Participant"
+      ]
+    ],
+    "user_permissions": [
+      [
+        "add_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "change_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "delete_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "view_logentry",
+        "admin",
+        "logentry"
+      ],
+      [
+        "add_group",
+        "auth",
+        "group"
+      ],
+      [
+        "change_group",
+        "auth",
+        "group"
+      ],
+      [
+        "delete_group",
+        "auth",
+        "group"
+      ],
+      [
+        "view_group",
+        "auth",
+        "group"
+      ],
+      [
+        "add_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "change_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "delete_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "view_permission",
+        "auth",
+        "permission"
+      ],
+      [
+        "add_user",
+        "auth",
+        "user"
+      ],
+      [
+        "change_user",
+        "auth",
+        "user"
+      ],
+      [
+        "delete_user",
+        "auth",
+        "user"
+      ],
+      [
+        "view_user",
+        "auth",
+        "user"
+      ],
+      [
+        "add_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "change_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "delete_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "view_contenttype",
+        "contenttypes",
+        "contenttype"
+      ],
+      [
+        "add_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "change_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "delete_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "view_session",
+        "sessions",
+        "session"
+      ],
+      [
+        "add_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "change_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "delete_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "view_category",
+        "tasks",
+        "category"
+      ],
+      [
+        "add_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "change_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "delete_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "view_employee",
+        "tasks",
+        "employee"
+      ],
+      [
+        "add_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "change_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "delete_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "view_event",
+        "tasks",
+        "event"
+      ],
+      [
+        "add_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "change_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "delete_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "view_participant",
+        "tasks",
+        "participant"
+      ],
+      [
+        "add_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "change_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "delete_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "view_project",
+        "tasks",
+        "project"
+      ],
+      [
+        "add_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "change_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "delete_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "view_task",
+        "tasks",
+        "task"
+      ],
+      [
+        "add_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "change_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "delete_taskdetail",
+        "tasks",
+        "taskdetail"
+      ],
+      [
+        "view_taskdetail",
+        "tasks",
+        "taskdetail"
+      ]
+    ]
+  }
+},
+{
   "model": "sessions.session",
-  "pk": "4lkv9r656scl3r6ogjh3u1b9rj8evei0",
+  "pk": "otinsvt5msaho8629tcfrbo2joru0nna",
   "fields": {
-    "session_data": ".eJxVjMEOwiAQRP-FsyHQhu3i0bvfQBZYpGogKe2p8d-lSQ86x3lvZheOtjW7rfHi5iiuQovLb-cpvLgcID6pPKoMtazL7OWhyJM2ea-R37fT_TvI1HJfp2FC1oqNVxZ9TyI0AyiyCRCsYa2nTkcMmoMBwt7GkJTmCABqFJ8v5PI3sA:1vjgpq:IR7xCqX7bJ-U1F0DTWtuEFrOidWY8kUcgM_IK2yGJ4E",
-    "expire_date": "2026-02-07T16:50:06.958Z"
-  }
-},
-{
-  "model": "tasks.employee",
-  "pk": 1,
-  "fields": {
-    "name": "Tyler Sosa",
-    "email": "joshuareyes@example.com"
-  }
-},
-{
-  "model": "tasks.employee",
-  "pk": 2,
-  "fields": {
-    "name": "Penny Manning",
-    "email": "greenalex@example.com"
-  }
-},
-{
-  "model": "tasks.employee",
-  "pk": 3,
-  "fields": {
-    "name": "Micheal Gibson",
-    "email": "myersriley@example.net"
-  }
-},
-{
-  "model": "tasks.employee",
-  "pk": 4,
-  "fields": {
-    "name": "Beverly Perez",
-    "email": "johnrobles@example.com"
-  }
-},
-{
-  "model": "tasks.employee",
-  "pk": 5,
-  "fields": {
-    "name": "Wendy Campos",
-    "email": "bruce43@example.org"
-  }
-},
-{
-  "model": "tasks.employee",
-  "pk": 6,
-  "fields": {
-    "name": "Jose Lowery",
-    "email": "kristincastillo@example.net"
-  }
-},
-{
-  "model": "tasks.employee",
-  "pk": 7,
-  "fields": {
-    "name": "Cathy Shaw",
-    "email": "veronicavang@example.com"
-  }
-},
-{
-  "model": "tasks.employee",
-  "pk": 8,
-  "fields": {
-    "name": "Eric Dyer",
-    "email": "rachel05@example.com"
-  }
-},
-{
-  "model": "tasks.employee",
-  "pk": 9,
-  "fields": {
-    "name": "Julie Schmidt",
-    "email": "rhodesbenjamin@example.com"
-  }
-},
-{
-  "model": "tasks.employee",
-  "pk": 10,
-  "fields": {
-    "name": "Daniel Nielsen",
-    "email": "laura37@example.com"
+    "session_data": ".eJxVjDsOwjAQRO_iGln2-k9JnzNYG6-NAyiR4qRC3B1HSgHVSPPezJtF3Lca95bXOBG7MmnZ5bccMT3zfBB64HxfeFrmbZ1Gfij8pI0PC-XX7XT_Diq22teAJKwHnRCELKBcAe21tAKyCz5p2QmRQVBGiWSCpUBoSumpHRTFPl_n2Ddz:1vp2is:I5jkJeq1D2uHgJSxKJZLtU3xIRm510xMAESJUS3wE0s",
+    "expire_date": "2026-02-22T11:13:02.151Z"
   }
 },
 {
@@ -154,18 +2272,16 @@
   "pk": 9,
   "fields": {
     "project": 5,
+    "assets": "",
     "title": "Quantum",
     "description": "Style answer record me sea. Mention billion seat lead major team red. Live certainly law share candidate describe.",
     "due_date": "2026-01-09",
     "status": "PENDING",
     "image": "task_images/night-club-party-flyer-social-media-story_505751-4366_FO5n8Ds.jpg",
-    "is_completed": false,
     "create_at": "2026-01-10T19:43:15.945Z",
     "updated_at": "2026-01-26T16:44:58.363Z",
-    "assigned_to": [
-      10,
-      7
-    ]
+    "attendees": [],
+    "assigned_to": []
   }
 },
 {
@@ -173,17 +2289,16 @@
   "pk": 10,
   "fields": {
     "project": 4,
+    "assets": "",
     "title": "Next Horizon",
     "description": "Southern different name try all ground own around. Series civil indicate benefit foot nice reason. Machine meeting nor meeting land even.",
     "due_date": "2026-01-01",
     "status": "IN_PROGRESS",
     "image": "task_images/istockphoto-1309885670-612x612_3rGzusS.jpg",
-    "is_completed": false,
     "create_at": "2026-01-10T19:43:15.948Z",
     "updated_at": "2026-01-26T15:58:43.788Z",
-    "assigned_to": [
-      7
-    ]
+    "attendees": [],
+    "assigned_to": []
   }
 },
 {
@@ -191,17 +2306,20 @@
   "pk": 11,
   "fields": {
     "project": 1,
-    "title": "Pulse 2026",
+    "assets": "",
+    "title": "Pulse 2025",
     "description": "Education image statement parent gun everything. Benefit rich hear break. Must tough week another she hospital hope.",
     "due_date": "2026-01-01",
     "status": "IN_PROGRESS",
     "image": "task_images/component_afV8L24.jpg",
-    "is_completed": false,
     "create_at": "2026-01-10T19:43:15.953Z",
-    "updated_at": "2026-01-26T15:58:34.594Z",
-    "assigned_to": [
-      2
-    ]
+    "updated_at": "2026-01-27T16:18:05.447Z",
+    "attendees": [
+      [
+        "a"
+      ]
+    ],
+    "assigned_to": []
   }
 },
 {
@@ -209,18 +2327,16 @@
   "pk": 12,
   "fields": {
     "project": 3,
+    "assets": "",
     "title": "InnovateX",
     "description": "Arm stop choose travel point laugh guess. Western anything across word whole though conference. Reach news rather appear job safe.",
     "due_date": "2026-01-04",
     "status": "COMPLETED",
     "image": "task_images/event-poster-template-design_23-2149231976.jpg",
-    "is_completed": false,
     "create_at": "2026-01-10T19:43:15.956Z",
     "updated_at": "2026-01-26T15:58:25.404Z",
-    "assigned_to": [
-      9,
-      5
-    ]
+    "attendees": [],
+    "assigned_to": []
   }
 },
 {
@@ -228,17 +2344,16 @@
   "pk": 13,
   "fields": {
     "project": 2,
+    "assets": "",
     "title": "Momentum",
     "description": "Relate class vote. Girl education woman hair carry.",
     "due_date": "2026-01-04",
     "status": "COMPLETED",
     "image": "task_images/1131w-3jFYznGEgnU_qZlrNfk.jpg",
-    "is_completed": false,
     "create_at": "2026-01-10T19:43:15.959Z",
     "updated_at": "2026-01-26T15:58:11.278Z",
-    "assigned_to": [
-      5
-    ]
+    "attendees": [],
+    "assigned_to": []
   }
 },
 {
@@ -246,18 +2361,16 @@
   "pk": 14,
   "fields": {
     "project": 3,
+    "assets": "",
     "title": "TechTide",
     "description": "Certain job player father. Suggest save loss data.",
     "due_date": "2026-01-06",
-    "status": "PENDING",
+    "status": "COMPLETED",
     "image": "task_images/component_stEn89T.jpg",
-    "is_completed": true,
     "create_at": "2026-01-10T19:43:15.961Z",
-    "updated_at": "2026-01-26T15:58:02.569Z",
-    "assigned_to": [
-      8,
-      7
-    ]
+    "updated_at": "2026-02-05T14:09:18.994Z",
+    "attendees": [],
+    "assigned_to": []
   }
 },
 {
@@ -265,17 +2378,16 @@
   "pk": 15,
   "fields": {
     "project": 5,
+    "assets": "",
     "title": "Visionary Vibes",
     "description": "Suddenly author write seven during exist. Character resource rich. Always reason indeed rest.",
     "due_date": "2026-01-06",
-    "status": "COMPLETED",
+    "status": "IN_PROGRESS",
     "image": "task_images/night-club-party-flyer-social-media-story_505751-4366_m3L9gVO.jpg",
-    "is_completed": false,
     "create_at": "2026-01-10T19:43:15.963Z",
-    "updated_at": "2026-01-26T15:57:43.853Z",
-    "assigned_to": [
-      5
-    ]
+    "updated_at": "2026-02-07T17:29:00.330Z",
+    "attendees": [],
+    "assigned_to": []
   }
 },
 {
@@ -283,18 +2395,20 @@
   "pk": 16,
   "fields": {
     "project": 1,
+    "assets": "",
     "title": "SparkCon",
     "description": "Because maybe those glass.",
     "due_date": "2026-01-07",
     "status": "IN_PROGRESS",
     "image": "task_images/component_eRjtkM2.jpg",
-    "is_completed": false,
     "create_at": "2026-01-10T19:43:15.969Z",
     "updated_at": "2026-01-26T15:57:34.153Z",
-    "assigned_to": [
-      8,
-      1
-    ]
+    "attendees": [
+      [
+        "a"
+      ]
+    ],
+    "assigned_to": []
   }
 },
 {
@@ -302,17 +2416,16 @@
   "pk": 17,
   "fields": {
     "project": 5,
+    "assets": "",
     "title": "Ignite 2026",
     "description": "Husband current once certainly religious dinner. Because campaign game bank once range arrive world. Cause get remember.",
     "due_date": "2026-01-03",
     "status": "IN_PROGRESS",
     "image": "task_images/night-club-party-flyer-social-media-story_505751-4366.jpg",
-    "is_completed": false,
     "create_at": "2026-01-10T19:43:15.973Z",
     "updated_at": "2026-01-26T15:57:22.777Z",
-    "assigned_to": [
-      5
-    ]
+    "attendees": [],
+    "assigned_to": []
   }
 },
 {
@@ -320,17 +2433,16 @@
   "pk": 18,
   "fields": {
     "project": 3,
+    "assets": "",
     "title": "Front Event Now Ongoing",
     "description": "Rich hard security cell. Player court police go.",
     "due_date": "2026-01-02",
     "status": "COMPLETED",
     "image": "task_images/istockphoto-1309885670-612x612_is7yFdK.jpg",
-    "is_completed": true,
     "create_at": "2026-01-10T19:43:15.977Z",
     "updated_at": "2026-01-26T15:56:23.402Z",
-    "assigned_to": [
-      4
-    ]
+    "attendees": [],
+    "assigned_to": []
   }
 },
 {
@@ -338,19 +2450,16 @@
   "pk": 19,
   "fields": {
     "project": 2,
+    "assets": "",
     "title": "Brazil Event Newi",
     "description": "Program design less source. Spring game read family feeling need piece. Small help rest morning ability building part. Begin skin can.",
     "due_date": "2026-01-04",
     "status": "PENDING",
     "image": "task_images/1131w-3jFYznGEgnU.jpg",
-    "is_completed": true,
     "create_at": "2026-01-10T19:43:15.981Z",
     "updated_at": "2026-01-26T15:56:06.586Z",
-    "assigned_to": [
-      8,
-      9,
-      2
-    ]
+    "attendees": [],
+    "assigned_to": []
   }
 },
 {
@@ -358,17 +2467,16 @@
   "pk": 20,
   "fields": {
     "project": 3,
+    "assets": "",
     "title": "Music Fest",
     "description": "Better while new very others. Whose though age power learn suddenly.",
     "due_date": "2026-01-03",
     "status": "IN_PROGRESS",
     "image": "task_images/component.jpg",
-    "is_completed": true,
     "create_at": "2026-01-10T19:43:15.987Z",
     "updated_at": "2026-01-26T15:55:43.979Z",
-    "assigned_to": [
-      2
-    ]
+    "attendees": [],
+    "assigned_to": []
   }
 },
 {
@@ -376,36 +2484,128 @@
   "pk": 25,
   "fields": {
     "project": 1,
+    "assets": "",
     "title": "Fusion 2026",
     "description": "dfd",
     "due_date": "2026-01-01",
     "status": "COMPLETED",
     "image": "task_images/figure6.png",
-    "is_completed": false,
     "create_at": "2026-01-26T14:27:13.738Z",
     "updated_at": "2026-01-26T15:59:05.168Z",
+    "attendees": [],
+    "assigned_to": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 39,
+  "fields": {
+    "project": 1,
+    "assets": "",
+    "title": "again",
+    "description": "fuck you",
+    "due_date": "2026-01-29",
+    "status": "PENDING",
+    "image": "task_images/Screenshot_353_jPzPXAH.png",
+    "create_at": "2026-01-29T13:46:15.310Z",
+    "updated_at": "2026-01-29T13:46:15.310Z",
+    "attendees": [
+      [
+        "a"
+      ]
+    ],
+    "assigned_to": []
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 40,
+  "fields": {
+    "project": 1,
+    "assets": "",
+    "title": "Happy Holi 2026",
+    "description": "The Lord of the Rings is a trilogy of epic high fantasy adventure films directed by Peter Jackson. The films are based on the novel The Lord of the Rings by J. R. R. Tolkien, and are titled identically to the three volumes of the novel: The Fellowship of the Ring, The Two Towers, and The Return of the King",
+    "due_date": "2026-11-01",
+    "status": "PENDING",
+    "image": "task_images/7.png",
+    "create_at": "2026-02-02T18:21:10.718Z",
+    "updated_at": "2026-02-02T18:21:10.718Z",
+    "attendees": [
+      [
+        "a"
+      ]
+    ],
     "assigned_to": [
-      3
+      [
+        "arman"
+      ],
+      [
+        "Sadia"
+      ],
+      [
+        "durjoy"
+      ]
     ]
   }
 },
 {
   "model": "tasks.task",
-  "pk": 28,
+  "pk": 41,
   "fields": {
     "project": 1,
-    "title": "dfgd",
-    "description": "fdfd",
+    "assets": "",
+    "title": "Hello",
+    "description": "dfdsaffadf",
+    "due_date": "2026-01-01",
+    "status": "IN_PROGRESS",
+    "image": "task_images/Screenshot_358.png",
+    "create_at": "2026-02-08T10:27:58.539Z",
+    "updated_at": "2026-02-08T10:27:58.539Z",
+    "attendees": [
+      [
+        "a"
+      ]
+    ],
+    "assigned_to": [
+      [
+        "arman"
+      ],
+      [
+        "hanig"
+      ],
+      [
+        "test2"
+      ],
+      [
+        "armandfd"
+      ],
+      [
+        "hiii"
+      ]
+    ]
+  }
+},
+{
+  "model": "tasks.task",
+  "pk": 42,
+  "fields": {
+    "project": 1,
+    "assets": "",
+    "title": "fdsf",
+    "description": "fsdfs",
     "due_date": "2026-10-01",
     "status": "IN_PROGRESS",
     "image": "",
-    "is_completed": false,
-    "create_at": "2026-01-26T20:47:44.073Z",
-    "updated_at": "2026-01-26T20:47:44.073Z",
+    "create_at": "2026-02-08T10:51:46.749Z",
+    "updated_at": "2026-02-08T10:51:46.749Z",
+    "attendees": [],
     "assigned_to": [
-      2,
-      3,
-      5
+      [
+        "hanig"
+      ],
+      [
+        "armandfd"
+      ]
     ]
   }
 },
@@ -528,11 +2728,29 @@
 },
 {
   "model": "tasks.taskdetail",
-  "pk": 29,
+  "pk": 33,
   "fields": {
-    "task": 28,
+    "task": 40,
     "priority": "L",
-    "notes": "fdfd"
+    "notes": "NOth8ng"
+  }
+},
+{
+  "model": "tasks.taskdetail",
+  "pk": 34,
+  "fields": {
+    "task": 41,
+    "priority": "L",
+    "notes": "afdsafasf"
+  }
+},
+{
+  "model": "tasks.taskdetail",
+  "pk": 35,
+  "fields": {
+    "task": 42,
+    "priority": "L",
+    "notes": "fdfs"
   }
 },
 {
@@ -1253,6 +3471,528 @@
     "object_repr": "Fusion 2026",
     "action_flag": 2,
     "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-01-29T12:57:33.379Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "tasks",
+      "task"
+    ],
+    "object_id": "33",
+    "object_repr": "test",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-01-29T13:04:22.788Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "tasks",
+      "task"
+    ],
+    "object_id": "34",
+    "object_repr": "test2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-01-29T13:13:28.773Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "tasks",
+      "task"
+    ],
+    "object_id": "35",
+    "object_repr": "test3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-01-29T13:14:51.769Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "tasks",
+      "employee"
+    ],
+    "object_id": "11",
+    "object_repr": "Emp1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-01-29T13:15:05.029Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "tasks",
+      "employee"
+    ],
+    "object_id": "12",
+    "object_repr": "Emp2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-01-29T13:33:05.848Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "tasks",
+      "task"
+    ],
+    "object_id": "36",
+    "object_repr": "email sending",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-01-29T13:44:25.173Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "tasks",
+      "task"
+    ],
+    "object_id": "38",
+    "object_repr": "sending email",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-01-29T13:46:21.587Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "tasks",
+      "task"
+    ],
+    "object_id": "39",
+    "object_repr": "again",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-01-29T14:32:13.034Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "tasks",
+      "task"
+    ],
+    "object_id": "39",
+    "object_repr": "again",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-01-29T14:32:24.955Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "tasks",
+      "task"
+    ],
+    "object_id": "39",
+    "object_repr": "again",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-01-29T20:15:13.940Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "object_id": "1",
+    "object_repr": "Manager",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-01-30T17:34:08.249Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "object_id": "2",
+    "object_repr": "CEO",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-01-30T19:03:35.287Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "1",
+    "object_repr": "arman",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-01-30T19:04:48.422Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "1",
+    "object_repr": "arman",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-01-30T19:20:13.706Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "object_id": "3",
+    "object_repr": "Intern",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-01-30T19:20:44.986Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "3",
+    "object_repr": "Sadia",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-01-30T19:21:03.218Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "3",
+    "object_repr": "Sadia",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-02-02T14:44:22.100Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "1",
+    "object_repr": "arman",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-02-07T11:47:22.771Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "object_id": "1",
+    "object_repr": "Manager",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-02-07T11:47:43.566Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "3",
+    "object_repr": "Sadia",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-02-07T11:53:11.439Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "13",
+    "object_repr": "dr",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2026-02-07T12:00:17.728Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "16",
+    "object_repr": "a",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2026-02-07T12:36:55.489Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "object_id": "1",
+    "object_repr": "Manager",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2026-02-07T12:47:13.285Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "object_id": "1",
+    "object_repr": "Manager",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2026-02-07T14:54:29.488Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "object_id": "3",
+    "object_repr": "Intern",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2026-02-07T14:55:25.578Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "16",
+    "object_repr": "a",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2026-02-07T15:26:28.691Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "object_id": "6",
+    "object_repr": "Admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2026-02-07T17:23:38.630Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "16",
+    "object_repr": "a",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2026-02-07T17:59:56.558Z",
+    "user": [
+      "arman"
+    ],
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "object_id": "7",
+    "object_repr": "Participant",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
   }
 }
 ]
